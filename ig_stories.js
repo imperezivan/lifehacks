@@ -37,8 +37,8 @@ let seeReels = () => {
   let images = [];
   items.forEach(i => seeItem(i, videos, images));
 
-  let imgHtml = images.reverse().map(i => '<img height="400" src="' + i + '"/>').join();
-  let vidHtml = videos.map(i => '<div style="width: max-content;"><a href="' + i + '" target="_blank" >' + i + '</a></div>').join();
+  let imgHtml = images.reverse().map(i => '<a href="' + i + '"><img height="400" src="' + i + '"/></a>').join('');
+  let vidHtml = videos.map(i => '<div style="width: max-content;"><a href="' + i + '" target="_blank" >' + i + '</a></div>').join('');
 
   document.getElementById('result').innerHTML = vidHtml + imgHtml;
 
